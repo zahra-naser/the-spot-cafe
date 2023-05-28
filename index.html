@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="THE SPOT CAFE">
+    <meta name="author" content="Najd Alaseeri, Zahra Nasser">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <!--To link a CSS stylesheet-->
+    <link href="stylesheet.css" rel="stylesheet">
+
+    <!--To add a favicon-->
+    <link rel="icon" type="image/x-icon" href="images/latte.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<body>
+    
+       <!--header start-->
+       <header>
+        <!--To add a navigation bar-->
+        <nav role="navigation" class="primary-navigation">
+          <img src="images/logo.png" alt="logo" />
+            <br>
+            <br>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+               
+                <li class="dropdown"> 
+                    <a href="menu.html">Menu</a>
+                    <div class="dropdown-content">
+                    <a href="food.html">Food</a>
+                    <a href="drinks.html">Drinks</a>
+            </div>
+        </li>
+                <li><a href="quote.html">Get Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+    </header>
+<!--header end-->
+
+<main>
+  <br>
+  <br>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="Images/alfredo_pasta.png" style="width:100%" alt="slideshow food">
+      <div class="text">Pasta Alfredo</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="Images/mix_grill.png" style="width:100%" alt="slideshow food">
+      <div class="text">Grill platter</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="Images/food2.jpg" style="width:100%" alt="slideshow food">
+      <div class="text">Prawn biryani</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="Images/chicken_arayes.png" style="width:100%" alt="slideshow food">
+        <div class="text">Chicken Arrayes</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="Images/arrabiata_pasta.png" style="width:100%" alt="slideshow food">
+        <div class="text">Pasta Arrabiata</div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+ <!--to add a breif introduction about the cafe-->
+<div class="column-text">
+  <h1>About us</h1>
+  <p>The spot café is a Bahraini business which opened at 2022. The café is located at Juffair. The café offers mixed cuisines and many varieties of drinks. The slogan of the café is “Endorse the quality of a mix cuisine” which means to support the quality of fusion food.We provide a one-of-a-kind eating experience with a relaxing ambiance and a large selection of delectable cuisine and beverages. It's a terrific spot for a quick snack, catching up with friends, or spending a relaxing afternoon.</p>
+</div> 
+
+<div class="img-r">
+  <img src="images/mix_grill.png" alt="food" >
+  <img src="images/chicken_burger.png" alt="food">
+  <img src="images/arrabiata_pasta.png" alt="food" class="p-n2">
+  <img src="images/strawberry_mojito.png" alt="food" class="p-n">
+</div>
+</main>
+
+<!--footer start-->
+<footer>
+  <div class="row primary">
+      <div class="column about">
+          <h3>Connect</h3>
+          <p>
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              Bld. 1087, Road 2419, Block 324 Juffair, Manama 340 Bahrain
+          </p>
+          <div class="social">
+            <a href="https://instagram.com/thespotcafebh?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram"></i></a>
+          </div>
+      </div>
+  
+      <div class="column link">
+          <h3>Links</h3>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="menu.html">Menu</a></li>
+              <li><a href="quote.html">Get Quote</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+  
+      <div class="column subscribe">
+          <h3>Newsletter</h3>
+          <div>
+              <input type="email" placeholder="Add your email here" />
+              <a href="index.html"><button>Subscribe</button></a>
+          </div>
+      </div>
+  </div>
+  <div class="row copyright">
+      <p>The spot cafe &copy; 2023</p>
+  </div>
+  </footer>
+      <!--footer end-->
+      <!--java script automatic slideshow-->  
+<script>
+let slideIndex = 0;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="THE SPOT CAFE">
+    <meta name="author" content="Najd Alaseeri, Zahra Nasser">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Quote</title>
+
+    <!--To link an external CSS stylesheet-->
+    <link href="stylesheet.css" rel="stylesheet">
+
+    <!--To add a favicon-->
+    <link rel="icon" type="image/x-icon" href="images/latte.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+      <!--header start-->
+      <header>
+        <!--To add a navigation bar-->
+        <nav role="navigation" class="primary-navigation">
+            <img src="images/logo.png" alt="logo" />
+            <br>
+            <br>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+               
+                <li class="dropdown"> 
+                    <a href="menu.html">Menu</a>
+                    <div class="dropdown-content">
+                    <a href="food.html">Food</a>
+                    <a href="drinks.html">Drinks</a>
+            </div>
+        </li>
+                <li><a href="quote.html">Get Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <br>
+        <br>
+    </header>
+<!--header end-->
+<main>
+    <img src="images/bb.png" class="bg" alt="background image"/>
+    <div id="container-quote">
+      <!-- form starts -->
+      <div class="quote">
+            <h2>Get Quote</h2>
+            
+            <form name="form1" action="" method="post" onsubmit="return validateForm(),validateemail()">
+
+                <input type="text" name="Name" placeholder="Name" value="" id="Name"  />
+               <div id="v1"> </div>
+                <br>
+
+                <input type="text" name="mobile" placeholder="Phone Number" value="" id="mobile" />
+                <div id="v2">
+            </div>
+            <br>
+                
+                <input type="text" name="email" placeholder="E-Mail Address" value="" id="email"/>
+                <div id="v3">
+            </div>
+            <br>
+                
+                <textarea name="message" placeholder="Message" id="msg"></textarea>
+            <div id="v5"></div>
+            <br>
+                <input type="submit" value="SEND" name="send" id="submit" onclick="return validateForm(),validateemail()">
+            <div id="v6"></div>
+            </form>
+        </div>
+    </div>  
+</main>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!--footer start-->
+<footer>
+    <div class="row primary">
+        <div class="column about">
+            <h3>Connect</h3>
+            <p>
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                Sienna Towers, Service Road, Bangalore
+            </p>
+            <div class="social">
+                <a href="https://instagram.com/thespotcafebh?igshid=MzRlODBiNWFlZA=="><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    
+        <div class="column link">
+            <h3>Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="quote.html">Get Quote</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    
+        <div class="column subscribe">
+            <h3>Newsletter</h3>
+            <div>
+                <input type="email" placeholder="Add your email here" />
+                <a href="index.html"><button>Subscribe</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="row copyright">
+        <p>The spot cafe &copy; 2023</p>
+    </div>
+    </footer>
+        <!--footer end-->
+ <!--Start java script-->
+ <script>
+
+    //to validateif the email address matches the following conditions
+    function validateemail() {
+             var x = document.form1.email.value;
+             var atposition = x.indexOf("@");
+             var dotposition = x.lastIndexOf(".");
+             if (atposition < 1 || dotposition < atposition + 2 || dotposition + 2 >= x.length) {
+                 document.getElementById("v3").innerHTML = "Please enter a Valid email";
+                 document.getElementById("v3").style.color = "Red";
+                 document.getElementById("email").style.borderColor ="red";
+                 document.getElementById("email").style.borderWidth ="2px";
+                 return false;
+             }
+             else {
+                 document.getElementById("v3").innerHTML = "";
+                 document.getElementById("email").style.borderColor ="green";
+                 document.getElementById("email").style.borderWidth ="2px";
+             } 
+         }
+         
+  function validateForm() {
+  
+ var fname=document.form1.Name.value; 
+ if (fname === "") {
+                 document.getElementById("v1").innerHTML = "Please enter your Name";
+                 document.getElementById("v1").style.color = "Red";
+                 document.getElementById("Name").style.borderColor ="red";
+                 document.getElementById("Name").style.borderWidth ="2px";
+
+ 
+             }
+             else {
+                 document.getElementById("v1").innerHTML = "";
+                 document.getElementById("Name").style.borderColor ="green";
+                 document.getElementById("Name").style.borderWidth ="2px";
+             } 
+ 
+ var mobile=document.form1.mobile.value; 
+ if (mobile === "") {
+                 document.getElementById("v2").innerHTML = "Please Enter Your Phone Number";
+                 document.getElementById("v2").style.color = "Red";
+                 document.getElementById("mobile").style.borderColor ="red";
+                 document.getElementById("mobile").style.borderWidth ="2px";
+ 
+             }
+             else if (mobile < 9) {
+                 document.getElementById("v2").innerHTML = "Mobile Number should be at least 9 numbers";
+                 document.getElementById("v2").style.color = "Red";
+                 document.getElementById("mobile").style.borderColor ="red";
+                 document.getElementById("mobile").style.borderWidth ="2px";
+             }
+             else {
+                 document.getElementById("v2").innerHTML = "";
+                 document.getElementById("mobile").style.borderColor ="green";
+                 document.getElementById("mobile").style.borderWidth ="2px";
+             }  
+ 
+ 
+ var message=document.form1.msg.value;  
+ if (message === "") {
+                 document.getElementById("v5").innerHTML = "Please enter your Message";
+                 document.getElementById("v5").style.color = "Red";
+                 document.getElementById("msg").style.borderColor ="red";
+                 document.getElementById("msg").style.borderWidth ="2px";
+             }
+             else {
+                 document.getElementById("v5").innerHTML = "";
+                 document.getElementById("msg").style.borderColor ="green";
+                 document.getElementById("msg").style.borderWidth ="2px";
+             } 
+ 
+ 
+  }
+
+     </script>
+</body>
+</html>
